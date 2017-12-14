@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="bd.com.justfood.nsufood.MainActivity">
+
+    <Button
+        android:id="@+id/btSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="signin"
+        android:onClick="clickSignIn"/>
+
+    />
+
+    <Button
+        android:id="@+id/btSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="signup"
+        tools:layout_editor_absoluteX="247dp"
+        tools:layout_editor_absoluteY="399dp"
+        android:onClick="clickSignUp"/>
+
+
+</LinearLayout>
