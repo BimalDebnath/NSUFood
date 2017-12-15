@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">NSU Food</string>
     <string name="title_activity_login">Sign in</string>
+    <string name="slogan">No matter where you are, We will find you and feed you</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

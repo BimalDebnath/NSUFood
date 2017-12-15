@@ -4,63 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundmain"
     android:orientation="vertical"
     tools:context="bd.com.justfood.nsufood.signup">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NSU FOODIES"
+        android:textColor="#ffff"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="50dp"
+        android:textStyle="italic|bold"
+        />
 
     <EditText
         android:id="@+id/etName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:inputType="text"
-        android:hint="Name" />
+        android:hint="NAME"
+
+        android:textColorHint="#ffff"/>
 
     <EditText
         android:id="@+id/etID"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:inputType="textPersonName"
-        android:hint="ID" />
+        android:hint="ID"
+
+        android:textColorHint="#ffff"/>
 
     <EditText
         android:id="@+id/etvName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:inputType="textPersonName"
-        android:hint="Varsity Name" />
+        android:hint="UNIVERSITY NAME"
+
+        android:textColorHint="#ffff"/>
 
     <EditText
         android:id="@+id/etmobile"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:inputType="textPersonName"
-        android:hint="mobile" />
+        android:hint="CONTACT NUMBER"
+
+        android:textColorHint="#ffff"/>
 
     <EditText
         android:id="@+id/etpass"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:inputType="textPassword"
-        android:hint="Password" />
+        android:hint="PASSWORD"
+
+        android:textColorHint="#ffff"/>
 
     <EditText
         android:id="@+id/etrepass"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:inputType="textPassword"
-        android:hint="repeat password"/>
+        android:hint="REPEAT PASSWORD"
+
+        android:textColorHint="#ffff"/>
 
     <Button
         android:id="@+id/btsubmit"
+        android:background="@drawable/signupbutton"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="clickOnSubmit"
-        android:text="submit" />
+        android:stateListAnimator="@null"
+        android:elevation="10dp"
+        android:text="submit"
+        android:textColor="#ffff"
+        />
 
 </LinearLayout>

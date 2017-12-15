@@ -7,6 +7,8 @@ package bd.com.justfood.nsufood;
         import android.app.AlertDialog;
         import android.content.Context;
         import android.os.AsyncTask;
+        import android.widget.Toast;
+
         import java.io.BufferedReader;
         import java.io.BufferedWriter;
         import java.io.IOException;
@@ -22,6 +24,7 @@ package bd.com.justfood.nsufood;
 
 public class BackgroundWorker extends AsyncTask<String,Void,String> {
     //context variable can hold any object type variable
+    public static String result = "";
     Context context;
     AlertDialog alertDialog;
     static String login_url = "http://192.168.1.105/login.php";
@@ -73,7 +76,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
             outputStream.close();
             InputStream inputStream = httpURLConnection.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
-            String result = "";
+
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 result += line;
@@ -124,8 +127,8 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
 
     @Override
     protected void onPostExecute(String result) {
-        alertDialog.setMessage(result);
-        alertDialog.show();
+
+
     }
 
     @Override

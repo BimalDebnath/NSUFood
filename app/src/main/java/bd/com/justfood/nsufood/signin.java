@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import static bd.com.justfood.nsufood.BackgroundWorker.result;
 
 public class signin extends AppCompatActivity {
 
@@ -33,7 +36,18 @@ public class signin extends AppCompatActivity {
         String type = "login";
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.execute(type, userID, password);
-        init();
+        if(result=="1")
+        {
+
+            init();
+        }
+        else
+        {
+            Toast.makeText(this,"Login unsuccessful",Toast.LENGTH_LONG).show();
+
+        }
+
+
     }
 
     //change layout position from sign up to Main activity class
@@ -44,7 +58,8 @@ public class signin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //create intent object to go to 1st layout(main activity class)
-                Intent toy = new Intent(signin.this, MainActivity.class);
+
+                Intent toy = new Intent(signin.this, ViewData.class);
                 //go to 1st layout page
                 startActivity(toy);
             }

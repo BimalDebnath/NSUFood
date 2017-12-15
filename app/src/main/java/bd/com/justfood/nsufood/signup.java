@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class signup extends AppCompatActivity {
 
@@ -66,6 +67,11 @@ public class signup extends AppCompatActivity {
             //sign up submission back end process
             backgroundWorker.execute(type, st_name, st_ID, st_vName, st_mobile, st_pass);
 
+        }
+        else {
+            Toast.makeText(this, "PASSWORD MISMATCH!!!", Toast.LENGTH_LONG).show();
+            pass.setText("");
+            repass.setText("");
         }
         clearUserInput();
         init();

@@ -1,41 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/backgroundmain"
     tools:context="bd.com.justfood.nsufood.signin">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:stateListAnimator="@null"
+        android:elevation="100dp"
+        android:layout_centerInParent="true"
+        >
 
-<EditText
-    android:id="@+id/etID"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:ems="10"
-    android:inputType="textPersonName"
-    android:hint="ID" />
+        <EditText
+            android:id="@+id/etID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:ems="10"
+            android:paddingLeft="8dp"
+            android:textColor="#ffff"
+            android:inputType="textPersonName"
+            android:hint="USER ID"
+            android:textColorHint="#ffff"
+            />
 
-<EditText
-    android:id="@+id/etPass"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:ems="10"
-    android:inputType="textPassword"
-    android:hint="Password" />
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:ems="10"
+            android:paddingLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffff"
+            android:inputType="textPassword"
+            android:hint="PASSWORD"
+            android:textColorHint="#ffff"/>
 
-<Button
-    android:id="@+id/btSignIn"
-    android:layout_width="wrap_content"
-    android:layout_height="43dp"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:onClick="clickSignIn"
-    android:text="login" />
+        <Button
+            android:id="@+id/btSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/signinbutton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="clickSignIn"
+            android:stateListAnimator="@null"
+            android:elevation="10dp"
+            android:text="login"
+            android:textColor="#ffff"/>
+
+    </LinearLayout>
 
 
-</LinearLayout>
+
+</RelativeLayout>

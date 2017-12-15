@@ -26,5 +26,4 @@ public class MainActivity extends AppCompatActivity {
         //start the program under the register button
         startActivity(new Intent(MainActivity.this,signup.class));
     }
-
 }
