@@ -23,6 +23,9 @@ public class signup extends AppCompatActivity {
 
         submitbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
+
+
                 //create intent object to go to 1st layout(main activity class)
                 Intent toy = new Intent(signup.this, MainActivity.class);
                 //go to 1st layout page
@@ -54,30 +57,43 @@ public class signup extends AppCompatActivity {
 
     //sign up submission function
     public void clickOnSubmit(View view) {
+
         String st_name = name.getText().toString();
         String st_ID = ID.getText().toString();
         String st_vName = varsity_name.getText().toString();
         String st_mobile = mobile.getText().toString();
         String st_pass = pass.getText().toString();
         String st_repass = repass.getText().toString();
-        if(st_pass==st_repass) {
-            String type = "register";
+        while(true) {
 
-            BackgroundWorker backgroundWorker = new BackgroundWorker(signup.this);
-            //sign up submission back end process
-            backgroundWorker.execute(type, st_name, st_ID, st_vName, st_mobile, st_pass);
+
+            if (st_pass.equals(st_repass) && st_pass.length()>0) {
+                String type = "register";
+
+                BackgroundWorker backgroundWorker = new BackgroundWorker(signup.this);
+                //sign up submission back end process
+                backgroundWorker.execute(type, st_name, st_ID, st_vName, st_mobile, st_pass);
+                clearUserInput();
+                Toast.makeText(this,"sign up successful",Toast.LENGTH_LONG).show();
+                Intent toy = new Intent(signup.this, MainActivity.class);
+                //go to 1st layout page
+                startActivity(toy);
+                break;
+
+            }
+            else {
+                Toast.makeText(this, "PASSWORD MISMATCH!!!", Toast.LENGTH_LONG).show();
+                pass.setText("");
+                repass.setText("");
+            }
+            st_pass = pass.getText().toString();
+            st_repass = repass.getText().toString();
 
         }
-        else {
-            Toast.makeText(this, "PASSWORD MISMATCH!!!", Toast.LENGTH_LONG).show();
-            pass.setText("");
-            repass.setText("");
-        }
-        clearUserInput();
-        init();
+
+       // init();
 
     }
-
 
     private void clearUserInput()
     {

@@ -36,12 +36,16 @@ public class signin extends AppCompatActivity {
         String type = "login";
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.execute(type, userID, password);
-        if(result=="1")
+        if(result=="login sucess")
         {
 
-            init();
+            Toast.makeText(this,"Login successful",Toast.LENGTH_LONG).show();
+            Intent toy = new Intent(signin.this, getData.class);
+            //go to 1st layout page
+            startActivity(toy);
+            //init();
         }
-        else
+        else if(result=="NOT")
         {
             Toast.makeText(this,"Login unsuccessful",Toast.LENGTH_LONG).show();
 
@@ -59,7 +63,7 @@ public class signin extends AppCompatActivity {
             public void onClick(View v) {
                 //create intent object to go to 1st layout(main activity class)
 
-                Intent toy = new Intent(signin.this, ViewData.class);
+                Intent toy = new Intent(signin.this, getData.class);
                 //go to 1st layout page
                 startActivity(toy);
             }
